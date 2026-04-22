@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Согласие на обработку персональных данных – Аренда спецтехники</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <h1 class="logo">Аренда спецтехники</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="privacy.html" class="nav-link">Политика конфиденциальности</a>
+            <a href="consent.html" class="nav-link active">Согласие на обработку ПД</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h2>Согласие на обработку персональных данных</h2>
+        <p id="consent-date"></p>
+    </div>
+</section>
+
+<main class="container">
+    <section class="consent">
+        <h3>Настоящим я, заполняя заявку на аренду спецтехники, даю согласие
+            <strong>РКС ООО</strong> на обработку моих персональных данных
+            (ФИО, телефон, e‑mail, сведения о выбранной технике и дате аренды)
+            в целях:</h3>
+        <ul>
+            <li>заключения и исполнения договора аренды;</li>
+            <li>связи со мной по вопросам аренды и предоставления информации;</li>
+            <li>выполнения требований законодательства.</li>
+        </ul>
+
+        <p>Я подтверждаю, что:</p>
+        <ul>
+            <li>мне предоставлена Политика конфиденциальности (ссылка в форме заявки);</li>
+            <li>я ознакомлен(а) с тем, какие данные будут обрабатываться;</li>
+            <li>мое согласие дано добровольно и может быть отозвано в любой момент
+                (отзыв осуществляется путем направления письменного запроса в адрес
+                компании, указанный в Политике конфиденциальности).</li>
+        </ul>
+
+        <p>Настоящее согласие действует с момента его подачи и до полного завершения
+            обработки указанных данных, если иное не предусмотрено законодательством.</p>
+
+        <p><strong>Контактные данные оператора персональных данных:</strong></p>
+        <p>
+            РКС ООО<br>
+            Email: <a href="office@rks.spb.ru">office@rks.spb.ru</a><br>
+            Тел.: +7 (953) 355 10 38
+        </p>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026  РКС. Все права защищены.</p>
+    </div>
+</footer>
+
+<script>
+/* Текущая дата «Дата последнего обновления» */
+document.getElementById('consent-date').textContent =
+    'Дата последнего обновления: ' + new Date().toLocaleDateString('ru-RU');
+</script>
+</body>
+</html>

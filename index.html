@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>РКС. Аренда спецтехники</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+          rel="stylesheet">
+
+    <!-- Swiper CSS (карусель) -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Ваши стили -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <h1 class="logo">РКС. Аренда спецтехники</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav-link active">Главная</a>
+            
+            <a href="privacy.html" class="nav-link">Политика конфиденциальности</a>
+            <a href="consent.html" class="nav-link">Согласие на обработку ПД</a>
+            <a href="requisites.html" class="nav-link">Реквизиты</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h2>Техника, проверенная в работе</h2>
+        <p>Экскаваторы, автокраны, погрузчики, бульдозеры — всё в аренду под ваш проект.</p>
+        <a href="#catalog" class="btn">Смотреть каталог</a>
+    </div>
+</section>
+
+<!-- КАРУСЕЛЬ -->
+<section class="carousel-section">
+    <div class="container">
+        <h3>Техника в цифрах</h3>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper"><!-- Слайды формируются carousel.js --></div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<!-- КАТАЛОГ -->
+<section id="catalog" class="catalog">
+    <div class="container">
+        <h3>Полный каталог</h3>
+
+        <table class="catalog-table">
+            <thead>
+                <tr>
+                    <th>Техника</th>
+                    <th>Описание</th>
+                    <th>Цена / час (₽)</th>
+                </tr>
+            </thead>
+            <tbody id="catalog-body"><!-- Заполняется main.js --></tbody>
+        </table>
+    </div>
+</section>
+
+<!-- ФОРМА -->
+<section id="order" class="order-section">
+    <div class="container">
+        <h3>Оставьте заявку</h3>
+
+        <form id="order-form"
+              action="https://formspree.io/f/xpqkyebe"
+              method="POST">
+
+            <!-- 1️⃣ ФИО -->
+            <div class="form-row">
+                <label for="name">Имя *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- 2️⃣ Телефон -->
+            <div class="form-row">
+                <label for="phone">Телефон *</label>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="+7 (___) ___‑__‑__" required>
+            </div>
+
+            <!-- 3️⃣ Техника (выпадающий список) -->
+            <div class="form-row">
+                <label for="equipment">Техника *</label>
+                <select id="equipment" name="equipment" required></select>
+            </div>
+
+            <!-- 4️⃣ Дата аренды -->
+            <div class="form-row">
+                <label for="date">Дата аренды *</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <!-- 5️⃣ Комментарий (необязательно) -->
+            <div class="form-row">
+                <label for="message">Комментарий</label>
+                <textarea id="message" name="message" rows="3"></textarea>
+            </div>
+
+            <!-- 6️⃣ Согласие на обработку ПД (обязательно) -->
+            <div class="form-row agreement">
+                <input type="checkbox" id="agree-data" name="agree-data" required>
+                <label for="agree-data">
+                    Я даю согласие на обработку персональных данных
+                    (<a href="consent.html" target="_blank">текст согласия</a>) *
+                </label>
+            </div>
+
+            <!-- 7️⃣ Согласие с политикой конфиденциальности (обязательно) -->
+            <div class="form-row agreement">
+                <input type="checkbox" id="agree-privacy" name="agree-privacy" required>
+                <label for="agree-privacy">
+                    Я ознакомлен(а) с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a> *
+                </label>
+            </div>
+
+            <!-- Скрытый input, в который JS запишет цену -->
+            <input type="hidden" name="price" id="priceHidden">
+
+            <button type="submit" class="btn">Отправить заявку</button>
+            <p id="form-status" class="form-status"></p>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 РКС. Все права защищены.</p>
+    </div>
+</footer>
+
+<!-- Скрипты (в нужном порядке) -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./js/carousel.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

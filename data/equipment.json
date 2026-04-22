@@ -1,0 +1,30 @@
+[
+  {
+    "id": "excavator-1",
+    "title": "Гусенечный экскаватор HYUNDAI R260LC-9S",
+    "description": "Вес 25,2 т, ковш 1,3 м³.",
+    "price":  3000,
+    "image": "./img/excavator.jpg"
+  },
+  {
+    "id": "bulldozer-1",
+    "title": "Фронтальный погрузчик VOLVOL220F",
+    "description": "Вес 35т, Ковш 6м³.",
+    "price": 4200,
+    "image": "./img/loader-2.jpg"
+  },
+  {
+    "id": "crane-1",
+    "title": "Манипулятор КАМАЗ, КМУ ИНМАН150",
+    "description": "Грузоподъёмность 7 т при 19 м вылете.",
+    "price":  3000,
+    "image": "./img/manipulyator.jpg"
+  },
+  {
+    "id": "loader-1",
+    "title": "Фронтальный погрузчик VOLVOL220E",
+    "description": "Вес 35т, Ковш 6м³.",
+    "price": 4200,
+    "image": "./img/loader.jpg"
+  }
+]
