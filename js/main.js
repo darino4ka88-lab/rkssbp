@@ -1,6 +1,6 @@
-/* -------------------------------------------------
+/* ==============================================================
    main.js – Таблица, список, отправка формы
-   ------------------------------------------------- */
+   ============================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
     loadCatalog();
@@ -74,7 +74,7 @@ function setupForm() {
             return;
         }
 
-        // 2. Проверка согласий (если они есть на странице)
+        // 2. Проверка согласий
         const agreeData = document.getElementById('agree-data');
         const agreePolicy = document.getElementById('agree-privacy');
 
@@ -89,7 +89,7 @@ function setupForm() {
             return;
         }
 
-        // 3. Запись цены (если поле существует)
+        // 3. Запись цены
         if (priceHidden) {
             const selectedOption = document.querySelector('#equipment option:checked');
             if (selectedOption) {
